@@ -1,0 +1,46 @@
+.footer {
+  padding: 2rem 1.5rem 6.5rem;
+  color: hsl(var(--text-color-grey));
+}
+
+.footer p {
+  margin: 0.3rem 0;
+  font-size: 1.4rem;
+}
+
+.footer a {
+  color: hsl(var(--text-color-grey));
+  text-decoration: underline;
+}
+
+.footer ul {
+  display: flex;
+  margin: 2rem 0 0 -0.5rem;
+}
+
+.footer ul a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  transition: all 300ms ease-in-out;
+}
+
+.footer ul a:hover,
+.footer ul a:focus {
+  color: hsl(var(--primary-color));
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding: 2rem 5rem;
+  }
+}

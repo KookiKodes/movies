@@ -4,6 +4,7 @@ import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import GlobalLoader from "./components/GlobalLoader";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 import "./styles/base.css";
 import "./styles/forms.css";
@@ -23,7 +24,10 @@ export default function App() {
           <Meta name="viewport" content="width=device-width,initial-scale=1" />
           <GlobalLoader />
           <Nav />
-          <Suspense>{props.children}</Suspense>
+          <Suspense>
+            {props.children}
+            <Footer />
+          </Suspense>
         </MetaProvider>
       )}
     >
