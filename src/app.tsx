@@ -1,17 +1,23 @@
-import { MetaProvider, Title } from "@solidjs/meta";
+import { Meta, MetaProvider, Title } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
-import "./app.css";
+import "./styles/base.css";
+import "./styles/forms.css";
+import "./styles/layout.css";
+import "./styles/normalize.css";
+import "./styles/transitions.css";
+import "./styles/typography.css";
+import GlobalLoader from "./components/GlobalLoader";
 
 export default function App() {
   return (
     <Router
-      root={props => (
+      root={(props) => (
         <MetaProvider>
-          <Title>SolidStart - Basic</Title>
-          <a href="/">Index</a>
-          <a href="/about">About</a>
+          <Title>Solid Movies</Title>
+          <Meta charset="utf-8" />
+          <Meta name="viewport" content="width=device-width,initial-scale=1" />
           <Suspense>{props.children}</Suspense>
         </MetaProvider>
       )}
