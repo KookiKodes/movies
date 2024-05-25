@@ -1,6 +1,6 @@
 import type { FeaturedMedia } from "~/services/app";
 import { formatRuntime } from "~/utils/format";
-import { createEffect, Show } from "solid-js";
+import { Show } from "solid-js";
 import styles from "./Hero.module.css";
 
 export default function Hero(props: { item: FeaturedMedia }) {
