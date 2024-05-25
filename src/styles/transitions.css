@@ -1,7 +1,7 @@
 /* Entire page load */
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.25s ease-out;
+  transition: all 250ms ease-out;
 }
 
 .page-enter,
@@ -12,7 +12,7 @@
 /* Slide down */
 .slidedown-leave-active,
 .slidedown-enter-active {
-  transition: 0.3s;
+  transition: 300ms;
 }
 
 .slidedown-enter,

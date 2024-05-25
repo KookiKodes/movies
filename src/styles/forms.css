@@ -9,7 +9,7 @@ a.button {
   letter-spacing: 0.05em;
   cursor: pointer;
   background-color: hsl(var(--secondary-color));
-  transition: all 0.2s;
+  transition: all 200ms;
 }
 
 .button:hover,
