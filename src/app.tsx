@@ -1,8 +1,8 @@
 import { Meta, MetaProvider, Title } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
+import { clientOnly } from "@solidjs/start";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
-import GlobalLoader from "./components/GlobalLoader";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -14,6 +14,8 @@ import "./styles/transitions.css";
 import "./styles/typography.css";
 import "./styles/helpers.css";
 
+const GlobalLoader = clientOnly(() => import("./components/GlobalLoader"));
+
 export default function App() {
   return (
     <Router
@@ -22,12 +24,12 @@ export default function App() {
           <Title>Solid Movies</Title>
           <Meta charset="utf-8" />
           <Meta name="viewport" content="width=device-width,initial-scale=1" />
-          <GlobalLoader />
           <Nav />
           <Suspense>
+            <GlobalLoader />
             {props.children}
-            <Footer />
           </Suspense>
+          <Footer />
         </MetaProvider>
       )}
     >
