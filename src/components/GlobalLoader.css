@@ -1,0 +1,55 @@
+.global-loader {
+  --primary-color: 207, 90%, 54%;
+
+  height: 3px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.global-loader__fill {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  transform: translateX(0);
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.5s ease;
+  background: hsl(var(--primary-color));
+}
+
+.global-loader::after {
+  display: block;
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: hsla(0, 0%, 0%, 0.2);
+}
+
+.global-loader--loading .global-loader__fill {
+  transition: none;
+  opacity: 1;
+  animation: Indeterminate 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

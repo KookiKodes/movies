@@ -18,6 +18,7 @@ export default function App() {
           <Title>Solid Movies</Title>
           <Meta charset="utf-8" />
           <Meta name="viewport" content="width=device-width,initial-scale=1" />
+          <GlobalLoader />
           <Suspense>{props.children}</Suspense>
         </MetaProvider>
       )}
