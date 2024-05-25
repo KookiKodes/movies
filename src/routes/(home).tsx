@@ -1,5 +1,4 @@
 import { cache, createAsync } from "@solidjs/router";
-import { createEffect } from "solid-js";
 import { getMovie, getTrending, getTvShow } from "~/services/tmdbAPI";
 
 const getTrendingMovies = cache(async () => {
@@ -59,9 +58,6 @@ export default function Home() {
     } catch {
       throw new Error("Data not available");
     }
-  });
-  createEffect(() => {
-    console.log(data());
   });
   return (
     <main class="main">
