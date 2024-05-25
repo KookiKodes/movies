@@ -1,4 +1,6 @@
 import { createAsync } from "@solidjs/router";
+import { Show } from "solid-js";
+import Hero from "~/components/Hero";
 import {
   getFeaturedMedia,
   getTrendingMovies,
@@ -39,7 +41,9 @@ export default function Home() {
   });
   return (
     <main class="main">
-      <p>{data()?.featured.media_type}</p>
+      <Show when={data()}>
+        <Hero item={data()!.featured} />
+      </Show>
     </main>
   );
 }
