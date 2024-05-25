@@ -20,6 +20,8 @@
   --text-color-grey: 207, 5%, 52%;
 
   --selection-color: 213, 92%, 85%;
+
+  --layout-nav-width: 10rem;
 }
 
 *,
@@ -124,4 +126,13 @@ table {
     padding: 0.5rem 0;
     text-align: left;
   }
+}
+
+a.active {
+  color: hsl(var(--primary-color));
+}
+
+a.active:hover,
+a.active:focus {
+  opacity: 1;
 }
