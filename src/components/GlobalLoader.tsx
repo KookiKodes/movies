@@ -1,7 +1,7 @@
 import { Show } from "solid-js";
+import { useIsRouting } from "@solidjs/router";
 
 import "./GlobalLoader.css";
-import { useIsRouting } from "@solidjs/router";
 
 export default function GlobalLoader() {
   const isRouting = useIsRouting();
