@@ -1,0 +1,35 @@
+.card {
+  margin-bottom: 1.5rem;
+  line-height: var(--base-line-height);
+}
+
+.card__img {
+  background-color: hsl(var(--secondary-color));
+  transition: transform 300ms ease-in-out;
+}
+
+.card__img span {
+  transform: scale(0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.card__img.lazyloaded img {
+  transform: scale(1);
+}
+
+/* Extra small */
+@media (min-width: 640px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .card__img span {
+    font-size: 1.6rem;
+  }
+}
