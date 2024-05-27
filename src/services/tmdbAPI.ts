@@ -347,7 +347,6 @@ async function fetchTMD<T>(
   url: string,
   params: Record<string, string | number | undefined> = {}
 ): Promise<T> {
-  "use server";
   let u = new URL(TMDB_API_URL + "/" + url);
   u.searchParams.set("api_key", TMDB_API_PARAMS.api_key);
   Object.entries(params).forEach(([key, value]) => {

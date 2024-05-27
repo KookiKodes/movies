@@ -1,4 +1,4 @@
-import type { FeaturedMedia } from "~/services/app";
+import type { FeaturedMedia } from "~/services/api";
 import { formatRuntime } from "~/utils/format";
 import { Show } from "solid-js";
 import styles from "./Hero.module.css";
