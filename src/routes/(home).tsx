@@ -1,11 +1,13 @@
 import { createAsync } from "@solidjs/router";
 import { Show } from "solid-js";
 import Hero from "~/components/Hero";
+import { ListingCarousel } from "~/components/ListingCarousel";
 import {
   getFeaturedMedia,
   getTrendingMovies,
   getTrendingTvSeries,
 } from "~/services/api";
+import { getListItem } from "~/services/tmdbAPI";
 
 export const route = {
   load: async () => {
@@ -42,6 +44,11 @@ export default function Home() {
     <main class="main">
       <Show when={data()}>
         <Hero item={data()!.featured} />
+        <ListingCarousel
+          items={data()?.trendingMovies.results}
+          viewAllHref={`/movie/categories/trending`}
+          title={getListItem("movie", "trending")?.TITLE}
+        />
       </Show>
     </main>
   );

@@ -96,7 +96,7 @@ export default function Hero(props: { item: FeaturedMedia }) {
                   </div>
                 </Show>
 
-                <Show when={props.item.vote_count > 0}>
+                <Show when={(props.item.vote_count || 0) > 0}>
                   <div>{props.item.vote_count} Reviews</div>
                 </Show>
               </div>

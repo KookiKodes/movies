@@ -1,0 +1,136 @@
+.listing {
+  margin: 2.5rem 1.5rem;
+}
+
+.listing__head {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.listing__title {
+  font-size: 1.8rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.listing__explore {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  letter-spacing: var(--letter-spacing);
+}
+
+.listing__explore:hover,
+.listing__explore:focus {
+  opacity: 0.8;
+}
+
+.listing__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.4rem;
+  margin-left: -0.4rem;
+}
+
+.listing__nav {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.listing--carousel {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.listing__carousel {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.listing__carousel .listing__head {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+/* .listing__items .card {
+  width: 33.3333333%;
+  padding: 0 0.4rem;
+
+  @media (min-width: $breakpoint-xsmall) {
+    width: 25%;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    width: 20%;
+  }
+
+  @media (min-width: $breakpoint-xlarger1) {
+    width: 16.6666667%;
+  }
+
+  @media (min-width: $breakpoint-xlarger2) {
+    width: 14.2857143%;
+  }
+
+  @media (min-width: $breakpoint-xlarger3) {
+    width: 12.5%;
+  }
+} */
+
+/* Extra small */
+@media (min-width: 640px) {
+  .listing {
+    margin: 3rem 1.5rem;
+  }
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .listing__carousel .listing__head {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+/* Medium */
+@media (min-width: 1024px) {
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .listing {
+    margin: 5rem;
+  }
+
+  .listing__head {
+    margin-bottom: 2rem;
+  }
+
+  .listing__title {
+    font-size: 2.4rem;
+  }
+
+  .listing__explore {
+    font-size: 1.4rem;
+  }
+  .listing__carousel .listing__head {
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+}
+
+/* Extra large */
+@media (min-width: 1400px) {
+}
+
+/* Extra large 1 */
+@media (min-width: 1500px) {
+}
+
+/* Extra large 2 */
+@media (min-width: 1800px) {
+}
+
+/* Extra large 3 */
+@media (min-width: 2500px) {
+}

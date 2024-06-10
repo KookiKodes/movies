@@ -1,5 +1,5 @@
 import { createSignal, JSX, splitProps } from "solid-js";
-import styles from "./Poster.module.scss";
+import styles from "./Poster.module.css";
 
 const lerp = (min: number, max: number, percentage: number) =>
   min * (1 - percentage) + max * percentage;
